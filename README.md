@@ -12,31 +12,40 @@ This project is a Django-based API for managing companies, employees, devices, a
 
 1. Clone the repository:
 
-   ```bash
-git clone [<repository-url>](https://github.com/ibugithub/Repliq-test.git)
+```bash
+git clone https://github.com/ibugithub/Repliq-test.git
+```
+
 Install dependencies:
 
-bash
 Copy code
+```bash
 pip install -r requirements.txt
+```
 Apply database migrations:
 
-bash
+
 Copy code
+```bash
 python manage.py migrate
+```
 Usage
 Start the Django development server:
 
-bash
 Copy code
+```bash
 python manage.py runserver
+```
 Visit the following URLs to access the API endpoints and documentation:
 
+```bash
 API Root: http://localhost:8000/
 API Documentation (Swagger UI): http://localhost:8000/swagger/
 API Documentation (Redoc): http://localhost:8000/redoc/
+```
 Use API endpoints to perform CRUD operations on companies, employees, devices, and transactions.
 
+```bash
 API Endpoints
 Create Company: POST /create_company/
 Show Companies: GET /show_company/
@@ -46,8 +55,8 @@ Create Device: POST /create_device/
 Show Devices: GET /show_device/
 Create Transaction: POST /create_transaction/
 Show Transactions: GET /show_transaction/
-Contributing
-Contributions are welcome! Please follow the contribution guidelines.
+```
+
 
 ## 👥 Authors <a name="authors"></a>
 
