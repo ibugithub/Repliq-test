@@ -13,7 +13,12 @@ class CreateCompanyAPI(APIView):
       serializer.save()
       return Response(status=status.HTTP_201_CREATED, data=serializer.data)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+  
+class ShowCompanyAPI(APIView):
+  def get(self, request):
+    companys = Company.objects.all()
+    serializer = serializer_class = CompanySerializer(companys, many=True)
+    return Response(status=status.HTTP_200_OK, data=serializer.data)
 
 
 
