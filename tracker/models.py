@@ -21,11 +21,13 @@ class Company(models.Model):
 
 
 class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email = models.EmailField()
     def __str__(self):
-        return self.user.username
-
+        return f"{self.first_name} {self.last_name} ({self.email})"
+    
 class Device(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
