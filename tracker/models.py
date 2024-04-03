@@ -19,9 +19,9 @@ class Company(models.Model):
     def __str__(self):
         return self.name
 
-
 class Employee(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    username = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
@@ -38,7 +38,7 @@ class Transaction(models.Model):
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
     device = models.ForeignKey(Device, on_delete=models.CASCADE)
     checked_out = models.DateTimeField()
-    checked_in = models.DateTimeField(null=True, blank=True)
+    checked_in = models.DateTimeField()
     condition_on_checkout = models.CharField(max_length=100)
     condition_on_checkin = models.CharField(max_length=100, null=True, blank=True)
 
