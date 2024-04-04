@@ -4,7 +4,7 @@ This project is a Django-based API for managing companies, employees, devices, a
 
 ## Features
 
-- Create, retrieve, update, and delete operations for companies, employees, devices, and transactions.
+- Create,retrieve, update, and delete operations for companies, employees, devices, and transactions.
 - Automated API documentation using Swagger UI and Redoc.
 - Custom API endpoints for various actions.
 
